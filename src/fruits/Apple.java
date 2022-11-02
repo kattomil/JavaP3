@@ -9,6 +9,7 @@ public class Apple extends Fruit implements SeedRemovable {
         this.setWater_content(water_content);
         this.setSugar_content(sugar_content);
         this.setColor(color);
+        this.setName("Apple");
     }
 
     @Override

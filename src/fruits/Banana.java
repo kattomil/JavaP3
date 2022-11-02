@@ -9,6 +9,7 @@ public class Banana extends Fruit implements Peelable {
         this.setWater_content(water_content);
         this.setSugar_content(sugar_content);
         this.setColor(Color.YELLOW);
+        this.setName("Banana");
     }
 
     @Override

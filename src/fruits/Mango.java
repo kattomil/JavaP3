@@ -10,6 +10,7 @@ public class Mango extends Fruit implements Peelable, SeedRemovable{
         this.setWeight(weight);
         this.setSugar_content(sugar_content);
         this.setWater_content(water_content);
+        this.setName("Mango");
     }
 
     @Override

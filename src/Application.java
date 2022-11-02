@@ -2,6 +2,7 @@ import fruits.Fruit;
 import fruits.Peelable;
 import fruits.SeedRemovable;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Application {
@@ -48,7 +49,7 @@ public class Application {
     }
 
     private void testFruitStuff() {
-        Fruit[] fruits = inputDevice.readFruit();
+        ArrayList<Fruit> fruits = inputDevice.readFruit();
 
         outputDevice.writeMessage(Fruit.computeSugarContent(fruits));
         outputDevice.writeMessage(Fruit.computeWeight(fruits));
@@ -62,6 +63,8 @@ public class Application {
                 System.out.println(((SeedRemovable) f).hasSeeds());
             }
         }
+
+        System.out.println(inputDevice.countFruit(fruits));
     }
 
     public void run(){
