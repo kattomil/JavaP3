@@ -4,6 +4,8 @@ import fruits.SeedRemovable;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.stream.Collectors;
 
 public class Application {
     InputDevice inputDevice;
@@ -46,6 +48,23 @@ public class Application {
 
     private void exampleHistogram() {
         System.out.println(Arrays.toString(this.wordSizeHistogram(inputDevice.getLine())));
+    }
+
+    /*
+    public void testFruitComparison() {
+        ArrayList<Fruit> fruits;
+        fruits = inputDevice.readFruit();
+
+        Collections.sort(fruits);
+    }
+     */
+
+    public void testStreams() {
+        ArrayList<Fruit> fruits;
+        fruits = inputDevice.readFruit();
+
+        System.out.println(fruits.stream().filter(f -> f.getSugar_content() < 20).collect(Collectors.toList()));
+
     }
 
     private void testFruitStuff() {
